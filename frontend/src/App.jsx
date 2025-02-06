@@ -5,7 +5,6 @@ import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import CreatePage from './pages/CreatePage'
 import ShowPage from './pages/ShowPage'
-import EditPage from './pages/EditPage'
 import Footer from './components/Footer'
 
 const App = () => {
