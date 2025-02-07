@@ -24,7 +24,7 @@ const CreatePage = () => {
     !book.genre || !book.rating || !book.description || !book.cover) {
     return { success: false, message: "Please fill in all fields" };
   }
-  const apiURI = 'http://localhost:3000';
+  const apiURI = 'https://book-store-mohamedfffffs-projects.vercel.app';
   const res = await fetch(`${apiURI}/books`, {
     method: 'POST',
     headers: {

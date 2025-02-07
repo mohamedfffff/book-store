@@ -9,7 +9,7 @@ const HomePage = () => {
   // fetching books from the backend
   const fetchBooks = async () => {
     try {
-      const apiURI = 'https://book-store-mohamedfffffs-projects.vercel.app';
+      const apiURI = 'http://localhost:3000';
       const response = await fetch(`${apiURI}/books`);
       const data = await response.json();
       setBooks(data.data);
