@@ -32,7 +32,7 @@ const ShowPage = () => {
 
   // deleting a book from the database
  const deleteBook = async(bookId)=>{
-  const apiURI = 'https://book-store-igazi7cik-mohamedfffffs-projects.vercel.app';
+  const apiURI = 'https://book-store-mohamedfffffs-projects.vercel.app/';
   const res = await fetch(`${apiURI}/books/${bookId}`, {
     method: 'DELETE',
   });
