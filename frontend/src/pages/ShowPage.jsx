@@ -19,7 +19,8 @@ const ShowPage = () => {
   // fetching a book from the backend with an id
  const fetchBook = async (id) => {
   try {
-      const response = await fetch(`http://localhost:3000/books/${id}`);
+      const apiURI = 'https://book-store-igazi7cik-mohamedfffffs-projects.vercel.app';
+      const response = await fetch(`${apiURI}/books/${id}`);
       const data = await response.json();
       setBook(data.data);
   } catch (error) {
@@ -31,7 +32,8 @@ const ShowPage = () => {
 
   // deleting a book from the database
  const deleteBook = async(bookId)=>{
-  const res = await fetch(`http://localhost:3000/books/${bookId}`, {
+  const apiURI = 'https://book-store-igazi7cik-mohamedfffffs-projects.vercel.app';
+  const res = await fetch(`${apiURI}/books/${bookId}`, {
     method: 'DELETE',
   });
   const data = await res.json();

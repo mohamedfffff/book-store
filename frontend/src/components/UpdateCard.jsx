@@ -17,7 +17,8 @@ const UpdateCard = ({ onClose , book }) => {
     !updatedBook.genre || !updatedBook.rating || !updatedBook.description || !updatedBook.cover) {
     return { success: false, message: "Please fill in all fields" };
   }
-  const res = await fetch(`http://localhost:3000/books/${id}`, {
+  const apiURI = 'https://book-store-igazi7cik-mohamedfffffs-projects.vercel.app';
+  const res = await fetch(`${apiURI}/books/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',

@@ -9,7 +9,8 @@ const HomePage = () => {
   // fetching books from the backend
   const fetchBooks = async () => {
     try {
-      const response = await fetch('http://localhost:3000/books');
+      const apiURI = 'https://book-store-igazi7cik-mohamedfffffs-projects.vercel.app';
+      const response = await fetch(`${apiURI}/books`);
       const data = await response.json();
       setBooks(data.data);
       if (!data.success) return { success: false, message: 'Server Error' };
